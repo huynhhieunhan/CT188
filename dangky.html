@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frozen Yogurt</title>
+    <link rel="icon" href="favicon.ico">
+    <link href="style.css" rel="stylesheet">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+    <header>        
+        <img src="logo.png" id="logo">
+        <img id="img1" src="header-img1.png">
+        <img id="img2" src="header-img2.png">
+        <img id="img3" src="header-img3.png">
+        <nav>
+            <a href="trangchu.html">Trang Chủ</a>
+            <a href="gioithieu.html">Giới thiệu</a>
+            <a href="sanpham.html">Sản phẩm</a>
+            <a href="tintuc.html">Tin tức</a>
+            <a href="dangnhap.html">Đăng nhập</a>
+            <a href="dangky.html">Đăng ký</a>
+            <a href="lienhe.html">Liên hệ</a>
+        </nav>   
+        <form class="search-box" method="GET" id="search-form" action="timkiem.html" onsubmit="return mySearch(event);">
+            <input name="search" type="search" id="search" placeholder="Nhập nội dung cần tìm..." />
+            <button type="submit" class="search-icon"><i class="fa fa-search"></i></button>
+            &nbsp;
+            <span onclick="window.location.href='donhang.html'" class="shopping-cart-icon"><i class="fa fa-shopping-cart"></i></span>
+          </form>
+    </header>
+    <main class="one-col">
+        <h1>Đăng ký</h1>
+      <form action="" method="post" enctype="multipart/form-data" onsubmit="return regValidate(this);">
+        <table>
+          <tr>
+            <td><label for="email" class="form-icons"><i class="fa fa-envelope"></i></label></td>
+            <td><input id="email" type="text" name="email" placeholder="Vui lòng nhập email" required/></td>
+          </tr>
+          <tr>
+            <td><label for="passwd" class="form-icons"><i class="fa fa-key"></i></label></td>
+            <td><input id="passwd" type="password" name="psw" placeholder="Vui lòng nhập mật khẩu" required/></td>
+          </tr>
+          <tr>
+            <td><label for="repasswd" class="form-icons"><i class="fa fa-key"></i></label></td>
+            <td><input id="repasswd" type="password" name="psw2" placeholder="Vui lòng nhập mật khẩu" required/></td>
+          </tr>
+          <tr>
+            <td><label class="form-icons"><i class="fa fa-group"></i></label></td>
+            <td>                
+              <input id="silver" type="radio" name="memberType"/>
+              <label for="silver"><b>Bạc</b></label>
+              <input id="gold" type="radio" name="memberType"/>
+              <label for="gold"><b>Vàng</b></label>
+              <input id="platinum" type="radio" name="memberType"/>
+              <label for="platinum"><b>Bạch Kim</b></label>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="avatar" class="form-icons"><i class="fa fa-id-badge"></i></label></td>
+            <td><input id="avatar" type="file"</td>
+          </tr>
+        </table>
+        <div>
+          Thông qua việc tạo tài khoản, bạn đồng ý với <a href="">Điều khoản & Quyền riêng tư của chúng tôi.</a>
+          <br/>
+          <input type="submit" value="Đăng Ký"/>
+          <input type="reset" value="Hủy"/>
+        </div>
+      </form>
+    </main>
+    <footer>&#169; 2021 Bản quyền thuộc về FreeezeVN 
+        <a href="#" class="fa-brands fa-facebook"></a>
+        <a href="#" class="fa-brands fa-twitter"></a>
+        <a href="#" class="fa-brands fa-pinterest"></a>
+        <a href="#logo"><img src="top.png" width="40px" ></a>
+    </footer>
+</body>
+</html>

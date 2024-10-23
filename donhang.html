@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frozen Yogurt</title>
+    <link rel="icon" href="favicon.ico">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script type="text/javascript" src="js/script.js"></script>
+    <script>window.onload = function(){ showCart(); };</script>
+</head>
+<body>
+    <header>
+        <img src="logo.png" id="logo">
+        <img id="img1" src="header-img1.png">
+        <img id="img2" src="header-img2.png">
+        <img id="img3" src="header-img3.png">
+        <nav>
+            <a href="trangchu.html">Trang chủ</a>
+            <a href="gioithieu.html">giới thiệu</a>
+            <a href="sanpham.html">sản phẩm</a>
+            <a href="tintuc.html">Tin tức</a>
+            <a href="dangnhap.html">Đăng nhập</a>
+            <a href="dangky.html">Đăng ký</a>
+            <a href="lienhe.html">Liên hệ</a>
+        </nav>
+        <form class="search-box" method="GET" id="search-form" action="timkiem.html" onsubmit="return mySearch(event);">
+            <input name="search" type="search" id="search" placeholder="Nhập nội dung cần tìm..." />
+            <button type="submit" class="search-icon"><i class="fa fa-search"></i></button>
+            &nbsp;
+            <span onclick="window.location.href='donhang.html'" class="shopping-cart-icon"><i class="fa fa-shopping-cart"></i></span>
+          </form>
+    </header>
+    <main class="one-col">
+        <h1>Chi tiết đơn hàng</h1>
+        <table border id="cartDetail">
+            <thead>
+                <tr>
+                    <th>Hình SP</th>
+                    <th>Tên SP</th>
+                    <th>Số lượng</th>
+                    <th>Giá</th>
+                    <th>Thành tiền</th>
+                    <th></th>
+                  </tr>
+            </thead>
+            <tbody></tbody>
+            <tfoot>
+                <tr><td colspan="6" align="right">Tổng thành tiền (A) = <span id="bill_totalpretax"></span></td></tr>
+                <tr><td colspan="6" align="right">Chiết Khấu (B) = <span id="bill_discount"></span></td></tr>
+                <tr><td colspan="6" align="right">Thuế (C) = 10% x (A - B) = <span id="bill_tax"></span></td></tr>
+                <tr><td colspan="6" align="right">Tổng đơn hàng = A - B + C = <span id="bill_total"></span></td></tr>
+                <tr><td colspan="6" align="center"><button type="submit">Xác Nhận Đơn Hàng</button></td></tr>
+            </tfoot>
+        </table>
+    </main>
+    <footer>&#169; 2021 Bản quyền thuộc về FreeezeVN 
+        <a href="#" class="fa-brands fa-facebook"></a>
+        <a href="#" class="fa-brands fa-twitter"></a>
+        <a href="#" class="fa-brands fa-pinterest"></a>
+        <a href="#logo"><img src="top.png" width="40px" ></a>
+    </footer>
+</body>
+</html>
